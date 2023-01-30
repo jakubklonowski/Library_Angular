@@ -1,0 +1,15 @@
+<form><br>
+    <p class="center"><mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput #inputName>
+    </mat-form-field></p>
+
+    <p class="center"><mat-form-field appearance="outline">
+        <mat-label>Author</mat-label>
+        <input matInput #inputAuthor>
+    </mat-form-field></p>
+
+    <p class="center">
+        <button mat-raised-button (click)="addBook(inputName.value, inputAuthor.value)" color="primary" type="button">Add</button>
+    </p>
+</form>

@@ -1,0 +1,39 @@
+<span id="search-add-span">
+    <mat-form-field appearance="outline" id="search-bar">
+        <mat-label>Search</mat-label>
+        <input matInput (keyup)="search($event)">
+    </mat-form-field>
+    <button mat-icon-button id="add-btn" (click)="openAddBookDialog()">
+        <mat-icon color="primary">note_add</mat-icon>
+    </button>
+</span>
+<table mat-table [dataSource]="books" matSort cdkDropList cdkDropListLockAxis="x" cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
+
+    <ng-container *ngFor="let col of columns" matColumnDef="{{col}}">
+        <th mat-header-cell *matHeaderCellDef cdkDrag mat-sort-header> {{col}} </th>
+        <td mat-cell *matCellDef="let element"> {{element[col]}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="modify">
+        <th mat-header-cell *matHeaderCellDef cdkDrag> Modify </th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-icon-button (click)="openModifyBookDialog(element.Id, element.Name, element.Author)">
+                <mat-icon color="primary">border_color</mat-icon>
+            </button>
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef cdkDrag> Delete </th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-icon-button (click)="deleteBookById(element.Id)">
+                <mat-icon color="warn">delete</mat-icon>
+            </button>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnsToDisplay"></tr>
+
+</table>
+<mat-paginator [pageSize]="10" [pageSizeOptions]="[10, 25]"></mat-paginator>

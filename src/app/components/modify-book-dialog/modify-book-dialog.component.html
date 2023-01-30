@@ -1,0 +1,20 @@
+<form><br>
+    <p class="center"><mat-form-field appearance="outline">
+        <mat-label>ID</mat-label>
+        <input matInput disabled [value]="id">
+    </mat-form-field></p>
+
+    <p class="center"><mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput [value]="name" #inputName>
+    </mat-form-field></p>
+
+    <p class="center"><mat-form-field appearance="outline">
+        <mat-label>Author</mat-label>
+        <input matInput [value]="author" #inputAuthor>
+    </mat-form-field></p>
+
+    <p class="center">
+        <button (click)="modifyBookById(id, inputName.value, inputAuthor.value)" mat-raised-button color="primary" type="button">Modify</button>
+    </p>
+</form>

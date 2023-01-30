@@ -1,0 +1,18 @@
+.toolbar-option {
+    margin: 0px 25px 0px 25px;
+}
+
+.toolbar-anchor {
+    color: white;
+    text-decoration: none;
+}
+
+.toolbar-anchor:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.center-icon {
+    vertical-align: middle;
+    margin-bottom: 3px;
+}
