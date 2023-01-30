@@ -1,0 +1,10 @@
+<form><br>
+    <p class="center"><mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput #inputName>
+    </mat-form-field></p>
+
+    <p class="center">
+        <button mat-raised-button (click)="addClient(inputName.value)" color="primary" type="button">Add</button>
+    </p>
+</form>

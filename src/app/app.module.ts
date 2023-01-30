@@ -22,6 +22,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { AddClientDialogComponent } from './components/add-client-dialog/add-client-dialog.component';
+import { ModifyClientDialogComponent } from './components/modify-client-dialog/modify-client-dialog.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     ClientComponent,
     PageNotFoundComponent,
     ModifyBookDialogComponent,
-    AddBookDialogComponent
+    AddBookDialogComponent,
+    AddClientDialogComponent,
+    ModifyClientDialogComponent
   ],
   imports: [
     BrowserModule,
