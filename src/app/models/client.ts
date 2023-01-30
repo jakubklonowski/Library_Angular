@@ -1,12 +1,12 @@
 export interface client {
-    id:     number
-    name:   string
+    Id:     number
+    Name:   string
 }
 
 export interface clientRequest {
-    name:   string
+    Name:   string
 }
 
 export interface clientResponse {
-    id: number
+    Id: number
 }

@@ -1,18 +1,18 @@
 export interface library {
-    id:         number
-    id_book:    number
-    id_client:  number
-    date:       Date
-    active:     boolean
+    Id:         number
+    Id_book:    number
+    Id_client:  number
+    Date:       Date
+    Active:     boolean
 }
 
 export interface libraryRequest {
-    id_book:    number
-    id_client:  number
-    date:       Date
-    active:     boolean
+    Id_book:    number
+    Id_client:  number
+    Date:       Date
+    Active:     boolean
 }
 
 export interface libraryResponse {
-    id: number
+    Id: number
 }

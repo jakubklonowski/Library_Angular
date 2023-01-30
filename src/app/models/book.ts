@@ -1,14 +1,14 @@
 export interface book {
-    id:     number
-    name:   string
-    author: string
+    Id:     number
+    Name:   string
+    Author: string
 }
 
 export interface bookRequest {
-    name:   string
-    author: string
+    Name:   string
+    Author: string
 }
 
 export interface bookResponse {
-    id: number
+    Id: number
 }
