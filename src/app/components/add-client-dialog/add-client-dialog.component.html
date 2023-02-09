@@ -4,7 +4,7 @@
         <input matInput #inputName>
     </mat-form-field></p>
 
-    <p class="center">
+    <p class="center" *ngIf="inputName.value != ''">
         <button mat-raised-button (click)="addClient(inputName.value)" color="primary" type="button">Add</button>
     </p>
 </form>

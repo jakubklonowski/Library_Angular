@@ -14,7 +14,7 @@
         <input matInput [value]="author" #inputAuthor>
     </mat-form-field></p>
 
-    <p class="center">
+    <p class="center" *ngIf="inputName.value != '' && inputAuthor.value != ''">
         <button (click)="modifyBookById(id, inputName.value, inputAuthor.value)" mat-raised-button color="primary" type="button">Modify</button>
     </p>
 </form>

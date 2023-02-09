@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'library', component: LibraryComponent },
   { path: 'books', component: BookComponent },
   { path: 'clients', component: ClientComponent },
+  { path: '',   redirectTo: '/library', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 

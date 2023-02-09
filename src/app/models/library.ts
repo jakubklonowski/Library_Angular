@@ -1,16 +1,27 @@
+import { book } from "./book"
+import { client } from "./client"
+
 export interface library {
     Id:         number
-    Id_book:    number
-    Id_client:  number
-    Date:       Date
+    Date:       string
     Active:     boolean
 }
 
+export interface libraryJoin {
+    Library:    library
+    Book:       book
+    Client:     client
+}
+
 export interface libraryRequest {
-    Id_book:    number
-    Id_client:  number
-    Date:       Date
+    Date:       string
     Active:     boolean
+}
+
+export interface libraryRequestJoin {
+    LibraryRequest: libraryRequest
+    Book:           book
+    Client:         client
 }
 
 export interface libraryResponse {

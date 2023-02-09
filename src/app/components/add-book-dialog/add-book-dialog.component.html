@@ -9,7 +9,7 @@
         <input matInput #inputAuthor>
     </mat-form-field></p>
 
-    <p class="center">
+    <p class="center" *ngIf="inputName.value != '' && inputAuthor.value != ''">
         <button mat-raised-button (click)="addBook(inputName.value, inputAuthor.value)" color="primary" type="button">Add</button>
     </p>
 </form>

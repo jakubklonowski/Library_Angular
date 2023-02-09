@@ -9,7 +9,7 @@
         <input matInput [value]="name" #inputName>
     </mat-form-field></p>
 
-    <p class="center">
+    <p class="center" *ngIf="inputName.value != ''">
         <button (click)="modifyClientById(id, inputName.value)" mat-raised-button color="primary" type="button">Modify</button>
     </p>
 </form>
